@@ -1,8 +1,8 @@
 FROM python:3.8
 
-WORKDIR /app
+WORKDIR /usr/app/src
 
-COPY trivia.py /app/trivia.py
+COPY trivia.py /usr/app/src/trivia.py
 
 RUN pip install requests
 
