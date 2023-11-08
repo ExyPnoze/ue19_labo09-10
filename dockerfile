@@ -1,9 +1,10 @@
-FROM python:3.8
+FROM python:3
 
-WORKDIR /usr/app/src
+WORKDIR /usr/src/app
 
-COPY trivia.py /usr/app/src/trivia.py
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install requests
+COPY . .
 
-CMD ["python", "trivia.py"]
+CMD [ "python", "trivia.py" ]
